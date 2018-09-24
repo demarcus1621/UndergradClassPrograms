@@ -1,0 +1,93 @@
+This is the test driver for Character methods.
+Function #1: void getAttributes()
+You have 20 steps left.
+You have 100 intelligence.
+You have 25 money.
+If output was displayed case passed.
+Function #2: int getSteps()
+Case passed.
+Function #3: int getScore()
+Case passed.
+Function #4: bool addSteps(int steps)
+Case passed.
+Function #5: bool addIntelligence(int intl)
+Case passed.
+Function #6: bool addMoney(int mon)
+Case passed.
+
+
+This is the test driver for Puzzle methods.
+Testing correct answer.
+What is 1 + 2 + 3 + 4?
+Hmm, I guess you're smart after all.
+Case passed.
+Testing inccorrect answer.
+Who performmed the first ever debugging of a computer?
+As I thougt, you're an idiot!
+Case passed.
+
+
+This is the test driver for the Menu methods.
+Function #1: void displayMenu()
+
+Steps Left: 20	Time Left: 30
+*********************************************
+1)Take a step forward
+2)Read research papers
+3)Search for dropped money
+4)View Character Stats
+5)Quit Game
+Case passed.
+Function #2: int getChoice()
+Should output same value that was input.
+1
+Case passed.
+Function #3: void getHighScores()
+Case #1: The file does not exist => file should be created.
+TestRun	75000
+TestRun	75000
+1234	1575
+AWESOM!	1075
+4568	575
+DEMJAOAHF	0
+sakksks	0
+qwertte	0
+zxnvkeui	0
+ksueiwsi	0
+Case passed.
+Case #2: The file does exist => an array should exist with up to the top 10 high scores.
+Score is high score.
+Score successfully added to list.
+TestRun	75000
+TestRun	75000
+TestRun	75000
+TestRun	75000
+1234	1575
+AWESOM!	1075
+4568	575
+DEMJAOAHF	0
+sakksks	0
+qwertte	0
+Case passed.
+Function #4: void implementChoice(int choice)
+Case #1: Input == 1
+GRUNT WORK!!!
+Intelligence -20
+Time -5
+Case passed.
+Case #2: Input = 2
+Hmm, a very interesting paper in your major sounds nice!
+ Intelligence +2
+Case pased.
+Case #3: Input = 3
+It must be your lucky day!
+ Money +18
+Case passed.
+Case #4: Input = 4
+You have 19 steps left.
+You have 82 intelligence.
+You have 43 money.
+Case passed.
+Case #5: Non-valid input
+Invalid Choice!
+Case passd.

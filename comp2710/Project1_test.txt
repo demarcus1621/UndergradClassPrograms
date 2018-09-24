@@ -1,0 +1,173 @@
+DeMarcus Campbell dec0013 903885028
+Project1_test.txt
+Associated Code and output for test cases
+
+ srand(time(0));
+ string answer;
+ Menu* menuTest = new Menu();
+ Character* characterTest = new Character();
+ Puzzle* puzzleTest = new Puzzle();
+ cout << "This is the test driver for Character methods.\n";
+ cout << "Function #1: void getAttributes()\n";
+ characterTest->getAttributes();
+ cout << "If output was displayed case passed.\n";
+ cout << "Function #2: int getSteps()\n";
+ assert(20 == characterTest->getSteps());
+ cout << "Case passed.\n";
+ cout << "Function #3: int getScore()\n";
+ assert(2500 == characterTest->getScore());
+ cout << "Case passed.\n";
+ cout << "Function #4: bool addSteps(int steps)\n";
+ assert(true == characterTest->addSteps(10));
+ assert(10 == characterTest->getSteps());
+ cout << "Case passed.\n";
+ cout << "Function #5: bool addIntelligence(int intl)\n";
+ assert(true == characterTest->addIntelligence(20));
+ cout << "Case passed.\n";
+ cout << "Function #6: bool addMoney(int mon)\n";
+ assert(true == characterTest->addMoney(20));
+ cout << "Case passed.\n";
+ cout<<endl;
+ cout<<endl;
+ cout << "This is the test driver for Puzzle methods.\n";
+ cout << "Testing correct answer.\n";
+ puzzleTest->askQuestion();
+ puzzleTest->checkAnswer("10");
+ cout << "Case passed.\n";
+ cout << "Testing inccorrect answer.\n";
+ puzzleTest->askQuestion();
+ puzzleTest->checkAnswer("Hopper Grace");
+ cout << "Case passed.\n";
+ cout<<endl;
+ cout<<endl;
+ cout << "This is the test driver for the Menu methods.\n";
+ cout << "Function #1: void displayMenu()\n";
+ menuTest->displayMenu();
+ cout << "Case passed.\n";
+ cout << "Function #2: int getChoice()\n";
+ cout << "Should output same value that was input.\n";
+ cout << menuTest->getChoice() << endl;
+ cout << "Case passed.\n";
+ cout << "Function #3: void getHighScores()\n";
+ cout << "Case #1: The file does not exist => file should be created.\n";
+ menuTest->getHighScores();
+ cout << "Case passed.\n";
+ cout << "Case #2: The file does exist => an array should exist with up to the top 10 high scores.\n";
+ assert(true == menuTest->isHighScore());
+ cout << "Score is high score.\n";
+ menuTest->addScore("TestRun");
+ cout << "Score successfully added to list.\n";
+ menuTest->getHighScores();
+ cout << "Case passed.\n";
+ cout << "Function #4: void implementChoice(int choice)\n";
+ cout << "Case #1: Input == 1\n";
+ menuTest->implementChoice(1);
+ cout << "Case passed.\n";
+ cout << "Case #2: Input = 2\n";
+ menuTest->implementChoice(2);
+ cout << "Case pased.\n";
+ cout << "Case #3: Input = 3\n";
+ menuTest->implementChoice(3);
+ cout << "Case passed.\n";
+ cout << "Case #4: Input = 4\n";
+ menuTest->implementChoice(4);
+ cout << "Case passed.\n";
+ cout << "Case #5: Non-valid input\n";
+ menuTest->implementChoice(-1);
+ cout << "Case passd.\n";
+
+
+
+This is the test driver for Character methods.
+Function #1: void getAttributes()
+You have 20 steps left.
+You have 100 intelligence.
+You have 25 money.
+If output was displayed case passed.
+Function #2: int getSteps()
+Case passed.
+Function #3: int getScore()
+Case passed.
+Function #4: bool addSteps(int steps)
+Case passed.
+Function #5: bool addIntelligence(int intl)
+Case passed.
+Function #6: bool addMoney(int mon)
+Case passed.
+
+
+This is the test driver for Puzzle methods.
+Testing correct answer.
+What is 1 + 2 + 3 + 4?
+Hmm, I guess you're smart after all.
+Case passed.
+Testing inccorrect answer.
+Who performmed the first ever debugging of a computer?
+As I thougt, you're an idiot!
+Case passed.
+
+
+This is the test driver for the Menu methods.
+Function #1: void displayMenu()
+
+Steps Left: 20	Time Left: 30
+*********************************************
+1)Take a step forward
+2)Read research papers
+3)Search for dropped money
+4)View Character Stats
+5)Quit Game
+Case passed.
+Function #2: int getChoice()
+Should output same value that was input.
+1
+Case passed.
+Function #3: void getHighScores()
+Case #1: The file does not exist => file should be created.
+TestRun	75000
+TestRun	75000
+1234	1575
+AWESOM!	1075
+4568	575
+DEMJAOAHF	0
+sakksks	0
+qwertte	0
+zxnvkeui	0
+ksueiwsi	0
+Case passed.
+Case #2: The file does exist => an array should exist with up to the top 10 high scores.
+Score is high score.
+Score successfully added to list.
+TestRun	75000
+TestRun	75000
+TestRun	75000
+TestRun	75000
+1234	1575
+AWESOM!	1075
+4568	575
+DEMJAOAHF	0
+sakksks	0
+qwertte	0
+Case passed.
+Function #4: void implementChoice(int choice)
+Case #1: Input == 1
+GRUNT WORK!!!
+Intelligence -20
+Time -5
+Case passed.
+Case #2: Input = 2
+Hmm, a very interesting paper in your major sounds nice!
+ Intelligence +2
+Case pased.
+Case #3: Input = 3
+It must be your lucky day!
+ Money +18
+Case passed.
+Case #4: Input = 4
+You have 19 steps left.
+You have 82 intelligence.
+You have 43 money.
+Case passed.
+Case #5: Non-valid input
+Invalid Choice!
+Case passd.

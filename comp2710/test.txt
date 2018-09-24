@@ -1,0 +1,6 @@
+[3;J[H[2J
+
+		Press ENTER to open terminal...
+
+
+Enter Option: [3;J[H[2JUsername: Password: Username: Password: Username: 

@@ -1,0 +1,42 @@
+% A5 Lab Report
+% DeMarcus Campbell (dec0013@auburn.edu)
+% 27OCT2017 
+
+# Benchmarking the ArrayStrand implementation
+
+## Show that ArrayStrand.cutAndSplice() is O(N)
+Record your response here.
+All statements within the method are constant until a for-loop is reached, where
+the recombinant DNA strand is being made. Both statements within the for-loop are of
+constant time complexity, and therefore the portion of the method with the largest impact
+on runtime would be the for-loop. As we discussed in class single loops that will iterate 
+at worst N amount of times has a time complexity of O(N).
+
+## Determine the largest power-of-two splice supported with 512M heap
+Record your response here.
+25,770,711
+
+## Determine the largest power-of-two splice supported with 1024M heap
+Record your response here.
+89,176,791
+
+## Determine the largest power-of-two splice supported as heap doubles
+Record your response here.
+342,801,111
+
+# Verifying the LinkedStrand implementation
+
+## Show that LinkedStrand.cutAndSplice() is O(1)
+Record your response here.
+It is O(1) in respect to the size of the splice. This was accomplished by using assignment statements and 
+controlling how the strings were manipulated. The method itself is O(N) depending on the amount of binding sites,
+but this is allowed according to the instruction sheet.
+## Determine the largest power-of-two splice supported with 512M heap
+Record your response here.
+67,108,864
+## Determine the largest power-of-two splice supported with 1024M heap
+Record your response here.
+134,217,728
+## Determine the largest power-of-two splice supported as heap doubles
+Record your response here.
+536,870,970
