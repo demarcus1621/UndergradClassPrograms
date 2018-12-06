@@ -1,0 +1,60 @@
+#lang racket
+
+;This is Homework 5 Exercise#1
+(define flat (lambda (in)
+               (for-each (lambda (x)
+               (define y (lambda() (if(pair? x) (car x)
+                    x)))
+               (cond [(null? in) in]
+                     [(null? y) y]
+                     [(list? y) (flat y)]
+                     [else (list* y (list-tail in (loc y x)))]))in)))
+
+(define loc (lambda (in lis)
+                  (- (length lis) (length(memv in lis)))
+              ))
+
+(define test (list '(1 2) 3 4))
+test
+(flat test)
+
+;This is Homework 5 Exercise#2
+(define mod3 (lambda (in)
+               (if (= (remainder in 3) 0) #t
+                   #f)))
+
+;The variable x can be changed to test program functionality
+(define x 41)
+x
+(mod3 x)
+
+;This is Homework 5 Exercise#3
+#|(define isort (lambda (xs)
+              (match xs [null? xs]
+              )))
+
+(define insert (lambda (x xs)
+                 (match xs [null? (list x)]
+                   [(list y (if (<= x y) (list x xs)
+                               (list y (insert x ys))))])))
+|#
+;This is Homework 5 Exercise#4
+(define reverse (lambda (x)
+                (cond [(null? x) x]
+                      [(not (list? x)) "Argument is not a list!"]
+                      [(append (reverse (cdr x))(list (car x)))])))
+
+;Modify this list to test that program works
+(define lis (list 1 2 3 4 4 3 2 1) )
+(define lis2 lis)
+
+(define compare (lambda (in1 in2)
+                  (if (equal? in1 in2) "This list is symmetric"
+                      "This list is not symmetric")))
+
+(define lis3 (reverse lis))
+lis3
+lis2
+(compare lis3 lis2)
+
+;This is Homework 5 Exercise#5

@@ -1,0 +1,12 @@
+The PROLOG file has comments that give example
+queries for each portion of the homework. Note
+that when finding the union of two lists, I 
+programmed them as lists NOT sets, thus the 
+union of two lists can have duplicate values.
+
+Resources utilized:
+To learn basic syntax, and how to use certain
+features of PROLOG.
+http://www.learnprolognow.org/
+For assistance with debugging Quicksort implementation.
+https://www.cp.eng.chula.ac.th/~piak/teaching/dsys/2004/quick-prolog.htm
