@@ -1,0 +1,178 @@
+Virtualization Definitions
+	Hypervisor - a software, firmware, or hardware
+	solution that creates and runs virtual machines
+		Type 1: Bare Metal
+			Runs independent of the OS
+		Type 2: Hosted
+			Dependant on the OS
+	Provision - allocation of host resources for guest
+	Clone - Replica or copy of a virtual machine for
+	either backup or operational purposes
+	Snapshot - Image capture of a virtual machine; Allow
+	quick rollback of a VM due to corruption or misconfiguration
+	Sandboxing - separation of guest resources from external sources
+	
+File System Abstraction
+Logical analysis of any file system should include definitions for:
+	Disk
+		Physical Storage Device
+			SCSI
+			SATA
+			SD
+	Partition
+		Logical separation for a disk
+		Partition: single disk
+		Volume: multiple disks
+	File System
+		Defines file layout and meta-data on the partition
+		Each partition/volume has a file system
+	Data Units
+		The smallest addressable data element
+		512 bytes -> 4 KB
+	Meta-data
+		Data about data units
+		Windows
+			File ID
+		Linux
+			Inode
+	File Name
+		User space naming
+
+Disk
+Mass Storage Devices(3 main categories)
+	Magnetic Media
+	Non-Volatile Memory(Flash)
+	Optical Media
+		CD, DVD, Blu-Ray
+Hard Disk Drives - Traditional hard disks depend on physical
+geometry of the drive
+	Heads
+	Platters
+	Tracks
+	Sectors per track
+Data location on the disk is derived utilizing Logical Block Addresses(LBA)
+Recall that disk are the smallest addressable data element
+	512 bytes -> 4 KB
+File deletion only unlinks references to data
+
+Hard Disk Drive Forensic Considerations
+When conducting a forensic analysis, there are forensic considerations when
+dealing with magnetic media
+	Physical vs Logical disks
+		physical - geometry
+		logical - partitions / volumes
+	Address Mapping
+		Cylinder-Head-Mapping
+		...
+		
+Magnetic Tapes
+Generally used for backup and archiving purposes in enterprise environments
+Magnetic tapes provide a stable media that can be used for long-term offline
+storage
+Sequential read and write, no random access
+Each file contains its own file system
+Read and written with SCSI commands
+Once written to, each archive is marked with an end of data(EOD) marker
+
+Non-Volatile Memory
+Flash Erase Electronically Erasable Programmable Read-Only Memory(Flash)
+Transistors making up mass storage devices can be composed of AND,OR, NAND
+...
+
+Solid State Drives
+Solid state drives are fundamentally different than traditional hard disks
+NAND-based storage does not suffer from physical ware
+
+SOlid State Drive Forensic Considerations
+When conducting a forensic analysis, there are forensic considerations
+when dealing with non-volatile memory
+	Unallocated Space
+		Unlike standard hard disk drives, unallocated space is usually erased
+		with TRIM in preparation for future writes whcih prevents recovery of
+		data
+	Address Mapping
+		Unlike standard hard disk drives, solid state drives us dynamic addressing
+		of logical to physical blocks
+		
+USB Flash Drives
+Universal Serial Bus
+NAND or NOR technology
+USB flash drives can be formatted with most common file systems:
+	FAT
+	exFAT
+	NTFS
+	extX
+	
+USB SCSI Protocols
+USB access storage devices with two modes:
+	Bulk Only Transport(BOT) mode
+		Legacy, lower performance mode
+	USB Attached SCSI Protocol(USASP)
+	...
+	
+USB Flash Drives Forensic Considerations
+Potential hiding techniques will be dependent on file system used
+USB flash drives are coded with:
+	Vendor ID
+	Product ID
+	
+Removable Memory Card Types
+Removable memory card are used extensively in numerous applications and have
+multiple formats
+	xD
+		Extreme Digital
+		Digital Photo applications
+	...
+	
+Optical Storage Media
+Different methods of reading and writing
+	Read-Only Memory(ROM)
+	Write-Once Read Many(WORM)
+	Read-Writable(RW)
+Compact Disk Types
+	...
+	
+Compact Disk Forensic Considerations
+Unlike standard HDDs which have EOD and Host Protected Areas(HPA) that prevent
+direct user access, optical media can be read but CD filesystems may require
+specific analysis tools
+
+Digital Versatile Discs
+DVDs are single of double sided with a 120-mm diameter and 1.2-mm thickness and
+composed of 2048 byte sectors
+Can be configured with Digital Rights Management(DRM) protection measures included
+encryption
+
+Blu-Ray Discs
+Just like CD and DVD discs, blue-ray is composed of 2048 byte sectors
+
+Media Detection and Configuration
+External Media Detection
+	Connect Drive to Host
+	Connect Drive to Guest
+	Available Devices
+	Auto mount vs Read only
+	Write Blocking
+	
+Media Detection and Access
+/dev - Device file repository
+dmesg - kernal level driver messages
+lsblk - list block devices
+lockdev - block device system calls
+lsscsi - list SCSI disk attributes
+lsusb - list USB buses 
+fdisk - disk format
+df - disk space
+hdparm - display and set drive parameters
+hexdump(xxd) - dump file contents in hex
+
+
+Partition
+SCSI device files listing disks and partitions
+Disks
+	/dev/sda - first disk
+	/dev/sdb - second disk
+Partitions
+	/dev/sda1 - first disk, first partition
+	``
+	
