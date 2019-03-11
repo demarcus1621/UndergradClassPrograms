@@ -1,0 +1,92 @@
+Introduction to File Systems
+A file system provides the data structures necessary
+to store and retrieve data. Data in a file system is
+configured into different hierarchal structures that
+array file and directories. The layers of a file
+system are:
+	Data Unit
+		Containers that hold file contents
+		Cluster/Block
+	Metadata
+		Data that describes a file
+			References to file storage location
+			File size
+			MAC time
+	File Name
+
+File Access
+When a disk partition is created, the file system
+establishes how the data is structured along with
+metadata. File systems usually work on blocks or
+clusters.
+	1 sector - 512 bytes
+	Block size - 1 - 128 sectors depending on the
+	file system
+...
+
+Essential File System Data
+Essential file system data are those needed to save and
+retrieve files
+	Reference addresses for accessing data
+	Filenames
+	Pointers to metadata
+Additional, but non-essential file system data, include:
+	File access times
+	File permissions
+The delineation between essential and non-essential ...
+
+FAT File System
+The File Allocation Table file system is a basic file
+systems. FAT is the principal file system used by legacy
+Windows OS
+	MS DOS
+	Windows 9*
+	
+FAT12
+	12-bit FAT entries
+	Cluster sizes form 512 Bytes - 4 KB
+	Partitions smaller than 16 MB
+	Legacy file system
+FAT16
+	...
+	
+Organization of a FAT Partition
+The simplicity of FAT is based on the small number of 
+data structures used
+	Reserved Area - Boot sector code
+		Number of FATs
+		Sector Sizes
+		Number of sectors in a cluster
+	FAT Area(s)
+		Table with one entry for each cluster in the partition
+		Multiple FATs are generated for redundancy
+	Root Directory
+		Fixed location for FAT12 and FAT16 partitions
+		FAT32 has a root directory but is stored in the data
+		area
+	Data Area
+		Contains "Directory Entry Structure" which provides
+		locations for files and directories
+		
+FAT supports only four ...
+
+FAT16 Partition
+16-bit entries
+1 entry for each cluster
+	Free cluster ( 0x0000 )
+	Occupied Cluster
+		0x0002 - 0xFFFF
+		...
+		
+		
+Creating Test Disks
+Identify Current Disk Parameters
+	Use fdisk to identify file systems and partitions currently on
+		the disk you are going to create
+	Select the correct disk
+	fdisk m
+	d	Deletes any partitions
+	n 	Creates new partition
+	w 	Writes changes to the disk
+	Check: sudo fdisk -l
+	

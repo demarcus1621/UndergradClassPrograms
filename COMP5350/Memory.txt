@@ -1,0 +1,83 @@
+Live Memory Dump Formats
+Live memory capture involves collecting system RAM
+to identify key system and user activities including
+	Running services and processes
+	OS configuration
+	Deleted and Temp data
+	Volatile Data
+Just as with storage formats there are numerous types
+of live memory dumps to be familiar with. Memory dump
+formats can occur do to the structure of the RAM and
+virtual memory being collected. Live memory dumps
+include
+	Raw memory dump
+	windows crash dump
+	windows hibernation files
+	expert witness format
+	HPAK Format
+
+Raw Memory Dump
+Just as with raw images for storage devices, raw memory
+can also be collected in a raw format. Structures between
+storage and memory devices is different. Raw memory does
+not contain ...
+
+Windows Crash Dump
+When Windows experiences a set of conditions that results
+in a system crash, a crash dump file is generated.
+Volatility can take the crash dump file format and identify
+certain issues relative to the system, but this method is
+not the best from the forensic standpoint. Crash dumps can
+be created on Windows systems through the use of 3 tools.
+
+Windows Hibernation Files
+Windows OS's produce a compressed copy of memory that is
+dumped to disk when executing the hibernation process
+	hiberfil.sys
+Forensic analysis of hibernation files started in 2008
+	Sandman
+Due to the compressed nature of the hibernation files,
+analysis requires decompressing. Hibernation files can
+not substitute for live memory captures since networking
+and connection data are lost during the hibernation process.
+
+EnCase Expert Witness Format
+EnCase EWF is used for memory dumps
+	EWF format - EnCase Version <= 6
+	EWF2-EX01 format - EnCase Version 7
+There are three different methods of analyzing EWF memory
+dumps with Volatility. ...
+
+HPAK
+HPAK format combines both physical memory and Windows page files
+into the same output. HPAK is a proprietary format ...
+
+Virtual Machine Memory Dumps
+It is important to understand the difference between host-based
+live memory versus virtual machine live memory. THe host provides 
+VM's with their resources so there are some similarities to what 
+is collected. ...
+
+Virtual Machine Hypervisor Memory
+There are a number of well-known hypervisors and each of them has different
+considerations when considering forensic memory collection.
+	VMWare
+		Suspending, pausing, and snapshotting the VM results in a copy of
+		memory on the hosts fiel system and is tracked in the .vmx
+		configuration file
+	Virtual Box
+		Does not create a memory when suspending, pausing, or snapshotting
+		Three methods of creating a VB memory dump	
+			vboxmanage debugvm
+			Debug when starting a VM session and use .pgmphystofile command
+			Utilize VirtualBox Python API
+			
+		A tool called Cuckoo Sandbox can be used to save VM memory in ELF64
+		...
+		
+Windows Volatile Memory Recovery
+VTypes
+	Most OSs are written in C. Volatility is written in Python. VTypes is a 
+	way to represent C data structures in Python source files. The structures
+	can contain object names, offsets, ...
+	

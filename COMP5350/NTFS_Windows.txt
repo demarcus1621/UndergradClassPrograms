@@ -1,0 +1,222 @@
+Introduction to Hashing Techniques
+Message Digest Algorithm
+The message digest algorithm is a hashing function that results
+in a 128-bit output regardless of the input to the algorithm. Dr.
+Ronald Rivest was the developer of message digest algorithm and
+implemented numerous iterations.
+	MD2 - 18 rounds
+	MD4 - 
+	
+Secure Hashing Algorithm
+A hashing algorithm originally designed by the NSA and part of the
+Keccak algorithm. There have been 3 versions of the SHA. SHA-1, SHA-2,
+and SHA-3.
+
+Hashing Collisions
+The objective of any hashing algorithm is to identify changes to the
+integrity of a digital object. A collision occurs any time different
+inputs to a hashing algorithm result in the same hash value. To be of
+use and to ensure trust, hashing algorithm can not have collisions. From
+a forensics standpoint, hash collisions undermine the integrity of digital
+artifacts. Although MD5 and SHA-1 are standard hashing algorithms for
+numerous applications and are built into most forensics tools, it is recommended
+to use more secure hashes such as SHA-3.
+
+Install libdigest-sha3-perl on SIFT VM
+
+Rainbow Tables
+Many OSs utilized hash-based security for credentials. If a system is
+compromised, it is relatively easy to gain access to credentials for follow-on
+system access. Rainbow tables provide a precomputed hash database to test
+exploited hashes. To make it more difficult to calculate hashes directly,
+additional characters known as "salt" are added to the hash.
+
+Disk Partitions vs NTFS partitions
+When creating a single NTFS partition on a device, the start of the NTFS is not
+at the start of the device partition. There is generally an offset used to
+buffer the disk partition from the NTFS partition. 
+
+NTFS Data Recovery Process
+When dealing with NTFS file systems and attempting to recover data the following
+steps 
+	1) Create a Proper Media Image
+		a)Identify the media for imaging
+		b)Select and test write blocker
+		c)Collect image
+		d)Hash image
+	2) Analyze Partition Header
+	3) Move to the Start Address of the NTFS partition
+	
+MFT System File Definitions
+	$MFT - 0
+		Provides definitions for all files on the partition. $MFT has a unique
+		attribute called $BITMAP which is used to manage MFT entries
+	$MFTMirr - 1
+		Backup of the first four $MFT entries
+	$LogFile - 2
+		Used as the NTFS journal which tracks changes to the system metadata
+	$Volume - 3
+		...
+	$AttrDef - 4
+		Tracks all file system attribute names and identifiers
+	$I30 - 5
+		Also known as the root directory. A key file for recovering deleted and
+		overwritten data in NTFS.
+	$Bitmap - 6
+		Tracks cluster utilization
+	$Boot - 7
+		Contains the boot sector and boot code in its $DATA attribute. $Boot always
+		starts in sector 0. $Boot is the only file that cannot be relocated.
+	$BadClus - 8
+		Lists all bad clusters in the partition
+	$Secure - 9
+		Contains all security descriptors for all files on the partition
+	$UpCase - 10
+		Converts lowercase characters to matching Unicode uppercase characters.
+		The purpose is to provide proper formatting for optional extensions
+		including quotas, reparse point data, and identifiers
+	$Extend - 11
+		Extended data to aid with disk ...
+	$Extend\$Quota - 24
+	...
+	
+Data Recovery Examples(System Generated Data)
+
+
+Windows Operating System Forensics
+	Best practices
+		SANS DFIR
+		SANS Reading Room
+		Windows Forensics Best Practices
+		Forensics Legal Consideration
+Utilizing Best practices specified in the Windows Responses Guide, we can classify
+forensic and response activities into the following steps:
+	Conduct Initial Response
+	Evidence Gathering
+	Protect Volatile Information
+	Create a Forensics Response Toolkit
+	Gather Physical and Digital Evidence
+	Script Data Collection
+	Identify Footprints
+Before a forensics event occurs organizations should have the following steps fully
+implemented through:
+	Response Policy
+	Subject Matter Expertise
+	Personnel Training
+	Forensic Testing Environment
+	Organizational Exercises
+
+Conduct Initial Response
+A forensics analysis will be conducted if it has been determined that negative activity
+has occurred on the network
+	Security Breach
+	Data Ex-filtration
+	Successful Social Engineering
+An number of questions need to be asked during this process:
+	Who found the incident
+	How
+	
+Evidence Gathering
+The first principle of evidence gathering is to conduct as few activities on the system
+as possible and maintain detailed evidence documentation to include all steps conducted.
+Incident response and forensic collections policies should address the chain of custody.
+During the initial evidence gathering process we should not:
+	Overwrite original media
+	Kill any process
+	Manipulate timestamps
+	Utilize untrusted collection or analysis tools
+	Perform any system modifications
+	
+Protect Volatile Information
+Recall order of volatility(OOV) of a system. With a Windows forensic analysis, OOV also
+applies:
+	CPU Registers and Cache
+	RAM Contents
+	Network Connections
+	Running Processes
+	Hard Drive File System
+	Removable and Backup Media
+	
+	
+Create a Forensics Response Toolkit
+There are numerous tools available to conduct forensic analysis activities and it is critical
+to vet all tools being used.
+
+Gather Evidence
+Steps to Proper Evidence Gathering
+	On External Collection System
+		Collect System Image
+		Hash check
+
+Windows Volatile Artifacts
+Volatile evidence includes:
+	System Information
+	Running Processes
+	Open Sockets
+	Network Connections
+	Network Shares
+	Network Users
+The BATCH file can be run from the removable media and the results stroed to the media or through
+...
+
+Windows Operating System Versions
+Forensics analysis of Windows is not limited to the most current version of the OS. Organizations
+maintain copies of both physical and virtualized Windows systems for numerous reasons:
+	Cost
+	Labor
+	Backwards Compatibility
+	Application no longer in development
+It's not uncommon to see older versions of Windows. 
+
+Windows Operating System Modes
+Windows is broken into two modes:
+	User Mode
+		When executing code in user mode, it can not directly access underlying hardware or
+		reference memory addresses. Access to hardware or memory depends on system APIs. User
+		mode crashes are recoverable.
+	Kernel Mode
+		When executing code in kernel mode, it has unrestricted access to the underlying hardware
+		and can directly access ...
+		
+Operating System Artifacts
+When the Windows OS is applied to disk, the file system is augmented with additional artifacts:
+	Windows Registry
+		Shell Bags
+	Event Logs
+	Recycle Bin
+	Prefetch Files
+	Scheduled Tasks
+	Jump Lists
+	Application Files
+
+Windows Registry Forensics
+The Windows registry is a "central hierarchal database used to store information that is necessary to
+configure the system for one or more users, applications, and hardware devices."
+Prior to Windows 2000, specific initialization files were used for system configuration.
+
+Windows Registry Operation
+A comprehensive copy of the registry can only be found in main memory since it requires both the 
+registry entries along with active processes that create it.
+
+Windows Registry Hives
+The highest level object in the Windows Registry is called a root key and the registry contains 5
+root keys:
+	HKEY_CLASSES_ROOT(HKCR)
+		All information relating to file name extensions and Object Linking and Embedding(OLE)
+	HKEY_CURRENT_USER(HKCU)
+		Contains settings for the currently logged on user
+	HKEY_LOCAL_MACHINE(HKLM)
+		Contains information about hardware and software of the system
+	HKEY_USERS(HKU)
+	HKEY_CURRENT_CONFIG(HKCC)
+	
+Additional Windows Artifacts	
+Windows event logs track changes for numerous applications througout the OS including:
+	Application
+	Security
+	Setup
+	System
+	Forwarded Events
+All details relative to how events logs are managed are handled in the Windows Registry
+
+
