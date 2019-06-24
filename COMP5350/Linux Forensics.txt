@@ -1,0 +1,121 @@
+Linux Forensics
+
+What's Different about Linux
+	No registry
+		Have to gather sys info from scattered sources
+	Different File System(of course)
+		No file creation dates(until EXT4)
+		Important metadata zeroed when files deleted
+		All Android systems use EXT4 making it the most used
+		file system in the world
+	Files/Data are mostly plain text
+		Good for string searching & interpreting data
+	
+Accessing the File System
+	Can be complicated
+	Encryption, RAID, Logical Volume Management
+		LVM makes life difficult to find file locations
+	Multiple partitions to mount
+
+What should we look for
+	/etc [%SystemRoot%/System32/config]
+		primary system configuration directory
+		separate configuration files/dirs for each app
+	/var/log [Windows event logs]
+		security logs, app logs, etc
+		logs normally kept for about 4-5 weeks
+	/home/$USER [%USERPROFILE%]
+		user data and user configuration information
+		
+Basic System Profiling
+Linux distro name/version number:
+	/etc/*-release
+Installation date
+	Look at dates on /etc/ssh/ssh_host_*_key files
+Computer name:
+	/etc/hostname
+IP address(es)
+	/etc/hosts(static assignments)
+	/var/lib/dhclient, /var/log/* (DHCP)
+	
+Default Time Zone
+/etc/localtime stores default time zone data
+Binary file format
+
+Basic user data in /etc/passwd
+	Any UID 0 account has admin privs
+MD5 password hashes in /etc/shadow
+	can be brute forced with John the ripper
+/etc/sudoers may indicate users w/ admin privs
+Group memberships in /etc/group
+
+User login history
+/var/log/wtmp
+	shows user, source, time, and duration of login
+	need to use Linux "last" command to view
+Other logs that may contain user data
+	/var/log/auth.log
+	/var/log/secure
+	/var/log/audit/audit.log
+
+$HOME
+/home/<user> is common convention
+Home directory for admin user is /root
+
+Web Browser Artifacts
+Firefox and Chrome are common browsers
+File formats are the same as Windows
+Files under home directory
+
+Nautilus
+	Linux graphical file browser
+	similar to windows explorer
+	
+Command History
+$HOME/.bash_history
+Not time stamped && can be modified by the user
+
+Sudo history in:
+	/var/log/auth.log
+	/var/log/sudo.log
+	
+SSH
+standard remote login service
+useful files in $HOME/.ssh
+	known_hosts - hosts user connected to from here
+	authorized_keys - public keys used for logins to here
+	id_rsa - private keys used to login elsewhere
+
+Things to watch out for
+	Persistence mechanisms
+	Back doors
+	other suspicious files and directories
+	
+Persistence Mechanisms
+Service start-up scripts
+	/etc/inittab, /etc/init.d, /etc/rc.d
+	/etc/init.conf, /etc/init
+Scheduled tasks
+	/etc/cron*
+	/var/spool/cron/*
+	
+Back Doors
+Deliberate malware/Trojan horse install
+In /etc/passwd and in /etc/shadow
+	Extra UID 0 accounts
+	"Application" accounts with active passwords
+New $HOME/.ssh/authorized_keys entries
+Back doors via inetd
+	/etc/inetd.conf
+	/etc/xinetd.conf, /etc/xinetd.d
+	
+Rogue "set-UID" files
+Directories w/ names that start with "."
+Regular files under /dev directory
+Recently modified files
+Large files(> 10 MB)
+
+hal@deer-run.com
+http://www.deer-run.com/~hal/
+http://computer-forensics.sans.org/blog/author/halpomeranz/
+http://www.sans.org/security-training/instructors/Hal-Pomeranz

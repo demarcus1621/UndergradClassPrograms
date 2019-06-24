@@ -1,0 +1,100 @@
+Linux Forensics
+Open source operating system(GPL). Modification and redistribution
+of source code. The first version of Linus was released in 1991.
+Although not derived directly from Unix-based operating systems,
+Linux was developed to be functionally similar to Unix. Each Linux
+instance contains common components
+	Bootloader
+	Kernel
+	Shell(s)
+	CLI
+	GUI
+	Applications
+	
+Linux Distros
+There are currently 285 Linux distributions in use. Each Linux
+distribution combines different software, projects, and libraries.
+Pre-compiled and tested software packages are known as repos.
+
+Linux Shells
+Access to Linux kernel and user spaces can be accomplished through
+a CLI. Linux Shell examples:
+	Bourne Again SHell
+	C-Shell
+	TEXEX Shell
+	Z-Shell
+	
+Available Shells
+Each distro has a default list of shells installed with the kernel.
+It will be necessary to use software package installers to add
+shells outside of the default list.
+
+BASH
+BASH includes the basic features common to all linux shells
+
+C Shell(csh)
+Created by Bill Joy of UC Berkeley. Objective was to created a 
+shell with a 
+
+TENEX Shell(tcsh)
+Developed for the TEXEX operating system and to be compatible with
+cs.
+
+Korn Shell(ksh)
+Released in 1993 at Bell Labs 
+
+Forensic Value of Linux Shells
+The Linux CLI is a powerful tool to identify forensically valuable
+artifacts across a Linux OS. The CLI can identify numerous artifacts
+including:
+	Bootloaders
+		MBR UEFI GRUB INITRD
+	Linux Filesystem Contents
+		ext2 ext3 ext4
+	Directory/File Structure
+	Services & Scheduled Tasks
+	Installed Software and packages
+	
+Basic Linux Commands
+	whoami
+	hostname
+	uname
+	time
+	date
+	type
+	history(!!)
+	
+Environment Variables
+Environment variables(EV) are values assigned within a shell and used
+by the operating system. 
+
+Linux Searches
+There are numerous Linux search commands that can be used in the analysis
+of a Linux system:
+	strings
+		Display printable strings in file(s)
+	srch_strings
+		Displays printable strings in file(s) along with disk offset
+		Sleuth Kit commands
+	grep
+		Global Regular Expression Printer
+	awk
+		shell scripting language to manipulate and filter data
+	sed
+		stream editor used to manipulate and filter text form files or
+		pipelines
+
+Search strings
+The search strings command, srch_strings, extends the following 
+
+Regular Expressions for Forensics
+Let's look at some common data artifacts that can be identified during
+a forensics investigation.
+
+File Expressions
+
+Network Information
+There are numerous network related artifacts that can be collected
+during a forensic analysis. All 7 of the OSI layers have known
+formats that can be ...
+

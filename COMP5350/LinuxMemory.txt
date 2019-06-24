@@ -1,0 +1,102 @@
+Linux Memory Acquisition and Analysis
+Legacy Linux systems were originally designed so that user
+privileged applications could directly read and write onto
+physical memory. It became apparant that direct interaction
+with physical memory could result in significant security risks.
+Examples of Linux legacy memory interfaces:
+	/dev/mem
+		character device file that provided access to all physical
+		address space which included both RAM and memory mapped to 
+		IO devices
+	/dev/kmem
+		collect kernel virtual memory
+	ptrace
+		debugging tool to collect running processes
+
+/dev/mem & /dev/kmem
+Looking at modern Linux systems /dev/mem is available, but /dev/kmem
+is not.
+
+Modern Linux Memory Acquisition
+To discover information about system RAM assoctiated with a
+particular Linux system we can make use of
+	/proc
+		The Linux kernel creates a virtual filesystem that is used
+		to provide information about the system. /proc does not 
+		contain files that are physically on the disk, instead it
+		creates runtime system information
+	/proc/iomem
+		displays a map of system memory for each connected physical
+		device. 
+		Column 1: Displays	memory 
+	/dev/fmem
+		To resolve the security gaps resulting from using /dev/mem
+		and /dev/kmem directly, modern Linux memory acquisition
+		techniques utilize multiple methods. A loadable kernel
+		module (LKM) that creates a character device called 
+		/dev/fmem. Just like /dev/mem, /dev/fmem exports physical
+		memory for other programs to access, but prevents the 
+		system from becoming unstable by checking to see if 
+		physical pages reside in main memory before trying to 
+		retrieve data and allowing access to physical pages outside
+		the range of /dev/mem
+	/proc/kcore
+		Exports kernel virtual address space as a user accessible
+		file in Executable and Linking Format(ELF)
+	LiME
+		The drawbacks with using /dev/fmem to collect Linux
+		memory can be resolved with the use of LiME. LiME also
+		creates a LKM, but instead of creating a user accessible
+		device for acquisition, all acquisition is accomplished in
+		the kernel. LiME automatically calculates the "System RAM"
+		specified in /proc/mem. When acquiring memory
+		
+Forensic Concerns with LiME
+The collection of Linux memory is not usually as straight forward
+as with Windows systems. LiME must be configured and compiled prior
+to utilizing it on a target system. Source code and supporting files
+must be compiled on the target system.
+
+Linux Memory Grabber
+Removable media based tool that creates a Linux Volatility profiles
+and dumps memory
+
+Second Look: Linux Memory Forensics
+Commercial memory collection tool that focuses on memory integrity
+checking
+
+ELF Format Introduction
+Executable and Linking Format is the central file format used on
+numerous file types including
+	Executables
+	Object Code and Libraries
+	Kernel modules
+	Core Dumps
+
+ELF File Structure
+Every ELF file will have the following sections
+	ELF Header
+	Program Header Table
+	Sections
+		.text
+		.rodata
+		.data
+	Section Header Table
+Tools to read ELF files:
+	dumpelf
+	readelf
+	objdump
+	hexdump
+	strings
+	ldd
+	xdd
+	
+ELF Header
+The ELF header starts at offset 0 of the file and contains key
+pieces of information about the file including:
+
+ELF Program Headers
+Before a binary can run in memory, it is necessary to create a
+process image which is a combination of programs and resources 
+need to properly execute. ELF Program Headers are a necessary
+component 
