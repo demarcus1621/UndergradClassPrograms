@@ -1,0 +1,78 @@
+Late 1960s
+	Transition from Discrete transistors to small-scale integrated
+	circuits
+	Mini-computers(16-bit datapath, price more in range of $10,000
+	to $100,000 rather than $100,000 to $1M): Data General, Digital
+	Equipment Corp, supported a single or a few interactive users
+	with CRTs
+1970s
+	IBM had a lock on mainframe market: US Anti-trust litigation
+	Department-sized units, small-businesses had minicomputers
+	(size of a fridge or two)
+	Invention of the microprocessor: Intel 8008, first CPU on a
+	single chip
+	Large-scale integration(LSI) - 20-50k transistors on a chip
+	Microcomputers: single user, 8-bit CPU, 4-6k memory, $1-5k.
+	Unix OS developed by ATT/Bell Labs runs on DEC minicomputers,
+	ported to many others
+1980s
+	Original IBM PC: 1981, killer app was the spreadsheet
+	8-bit and 16-bit microprocessors (reprise of mainframe history
+	on sigle chips)
+	Minicomputers: DEC VAX 11/780 ( 1 MIPS, by definition) 
+	Core memory replaced by DRAM
+	Intel 386: watershed, supported memory protected in hardware
+1990s
+	Workstations with 32-bit processors (Sun microsystems, Data Geeneral
+	Apollo, HP) running versions of Unix
+	Development of Linux, open source version of UNix that runs on Intel
+	386 or later CPUs 
+	...
+2000-2010s
+	Intel's 32 bit architecture finally deprecated ( VLIW based IA-64
+	fails because of lack of backward compatibility with IA-32)
+	Rise of importance of mobile and embedded systems (mostly running
+	ARM CPUs, based on BBC Acorn, modified to be a RISC)
+	Power consumption and clock distribution limit speed of CPUs
+	Ever-bigger caches
+State of the art
+	Feature size (smallest thing that can be redered in silicon) 7nm
+	5 nm is the theoretical limit - quantum tunneling begins
+	Uniprocessor clock speed; 4-5 GHz (flawed measure of performance)
+	Power consumption heat disipation
+Future directions
+	portacble devices
+	multi-core chips
+	parallel clusters
+	GPU based genral purpose computing
+	
+DEC PDP-8 (1968)
+	single accumulator register
+	no other registers
+	12 bit datapath 
+	12 bit address bus (4K memory) 
+	magnetic core
+	SSI (10-12 gates/chip ) integrated circuit 
+
+Intel 8080 (1976) 
+	accumulator and B,C,D,E,H,I registers
+	8 bit datapath
+	16 bit address bus
+	semiconductor memory (DRAM) 
+	VLSI integrated circuit (~50K transistors/chip) 
+	chip size is 20 mm^2
+
+Intel Core i7 (2012)
+	64 bit data and address bus
+	32 bit compatibility mode
+	AMD 64 mode
+	4 CPU core on one chip
+	3 GHz clock speed 
+	8 MB cache on chip
+	chip size 146 mm^2?
+	over 1 million transistors
+	
+RISC-V (2007)
+	64 bit 
+	32 general purpose integer registers
+	32 floating point registers
