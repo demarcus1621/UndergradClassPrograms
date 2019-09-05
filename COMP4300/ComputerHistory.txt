@@ -55,7 +55,7 @@ DEC PDP-8 (1968)
 	SSI (10-12 gates/chip ) integrated circuit 
 
 Intel 8080 (1976) 
-	accumulator and B,C,D,E,H,I registers
+	accumulator and B,C,D,E,H,L registers
 	8 bit datapath
 	16 bit address bus
 	semiconductor memory (DRAM) 

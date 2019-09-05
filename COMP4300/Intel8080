@@ -1,0 +1,16 @@
+Intel 8080
+first 2 bits on 8080 are ALWAYS an opcode, doesn't mea that other bits
+couldn't be opcodes, just depended on the first 2 bits to truly determine
+uses semiconductor SRAM/DRAM memory
+
+ADDR		ASSEMBLY		BINARY
+------------------------------------
+0x0100		MVI A, 0x23		0011 1110
+0x0101						0010 0011
+0x0102		MVI B, 0x44		0000 0110
+0x0103						0100 0100
+0x0104		ADD B			1000 0000
+0x0105		STA 0x0300		0011 0010
+0x0106
+0x0107
+0x0108		JMP 0x0100

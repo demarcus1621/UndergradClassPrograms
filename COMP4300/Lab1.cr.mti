@@ -1,0 +1,7 @@
+C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/Lab1.vhdl {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\Lab1.vhdl}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity andOrSwitch
+-- Compiling architecture behaviour1 of andOrSwitch
+
+} {} {}}

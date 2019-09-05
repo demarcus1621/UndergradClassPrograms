@@ -1,0 +1,28 @@
+Desktop - single user, performance
+Laptop - performance, limited battery/heat disipation issues
+Mobile - heavily limited on power
+Embedded/IOT - physical size, very low power
+Cluster - 
+GPU - 
+
+Classes of Parallelism
+-----------------------
+Instruction level parallelism
+Task/Thread parallelism
+Data Level parallelism
+
+LD	R1, #100
+LD	R2, #101
+LD	R3, #102
+LD	R4,	#103
+ADD	R5, R1, R2 where R1 and 2 are operands
+SUB R6, R2, R3 where R2 and 3 are operands
+MULT	R7, R3, R4
+ADD	R8, R5, R7
+SUB R9, R3, R4
+
+Given proper hardware, some of the commands will be completed at the same
+time.
+Single instruction, Single Data(SISD) - no parallelism
+Single instruction, Multiple Data(SIMD) - data parallelism
+Multiple instruction, Multiple Data(MIMD) - independant tasks/threads
