@@ -1,0 +1,57 @@
+4 Types of Architecture
+------------------------
+Stack
+Accumulator
+Register-memory
+Register-register load store
+
+A + B = C in the different architectures
+------------------------------------------
+Stack
+	PUSH A
+	PUSH B
+	ADD
+	POP c
+
+Accumulator
+	LOAD A
+	ADD B
+	STORE C
+	
+Register-memory
+	LOAD R1, ADD
+	ADD R3, R1, B
+	STORE R3, C
+	
+Register-register
+	LOAD R1, A
+	LOAD R2, B
+	ADD R3, R1, R2
+	STORE R3, C
+	
+Adding 1 to all elements of a 2-D array
+------------------------------------------
+LD R1, #1	// RD = loop control
+LD R2, ADD	// base address of array
+			// first byte of A(1,1)
+LD R3, #16	// size of a column
+LOOP LD R4, R1
+SUB R5, R1, #1
+MUL R5, R3, R5
+ADD R5, R2, R5 // address of current element
+FLD F1, (R5)
+FLD F2, #1.0
+FADD F1, F2, F1
+FST F1, (R5)
+ADD R1, R1, #1
+SUB R6, R1, #4 // do 4 iterations
+BNZ LOOP
+
+Instruction Set Goals
+-----------------------
+lots of registers
+fast to decode
+compact code size
+regularity
+primitive instructions
+don't evaluate stuff at runtime that is known at compilation

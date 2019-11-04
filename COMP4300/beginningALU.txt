@@ -1,0 +1,20 @@
+Half-Adder:
+in_a	in_b	result	carry_out
+0		0		0		0
+0		1		1		0
+1		0		1		0
+1		1		0		1
+This can be made with an AND gate to compute the carry_out
+and a XOR gate for result.
+
+Full-Adder:
+carry_in	in_a	in_b	result	carry_out
+0			0		0		0		0
+0			0		1		1		0
+0			1		0		1		0
+0			1		1		0		1
+1			0		0		1		0
+1			0		1		0		1
+1			1		0		0		1
+1			1		1		1		1
+Having a full-adder in a circuit introduces

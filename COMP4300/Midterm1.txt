@@ -1,0 +1,19 @@
+Mid-Term Exam 10/8
+-------------------
+open book, notes, computer, calculator
+- computer history
+- pdp-8
+- intel 8080
+- chapter 1
+- appendix A
+- appendix C through 10/1
+	C.3 - simple implementation of RISC-V
+	C.1 - up to page C.14
+- VHDL from lab assignments
+- Amdahl's Law
+- Processor Performance Equation
+
+Structural Hazards - two instructions in different pipeline stages need
+same hardware (can fix by replicating hardware)
+
+Data Hazards - one instruction depends on result of another

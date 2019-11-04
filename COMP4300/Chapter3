@@ -1,0 +1,90 @@
+structural hazards
+data hazards
+control hazards
+	delayed branch slot
+	predict the branch & do conditional execution:
+	capability to undo all consequences of executing
+	wrong instruction
+		predict the branch as always taken
+			super simple
+			not that accurate
+		store 1 bit of info about recently executed branches
+			1 = was taken last time
+			0 = was not taken last time
+			predict it will do same thing as last time
+			update the bit when you know whether it was taken
+		store 2 bits of info about each recent branch
+		
+	for i = 1 to 10
+		LD R1, #1
+		LOOP |
+			 |
+			ADD R1,R1,#1
+			SUB R2,R1,#11
+			BNZ R2, LOOP
+			
+Memory:
+static RAM - fast (< 1 ns), but big circuit. Used for onboard CPU storage
+or registers
+dynamic RAM - not quite as fast (worst case 10 - 15 ns), small circuit,
+must be periodically refreshed
+Both sRAM and dRAM lose state without power
+flash - Electrical Erasable Programmable Read Only Memory, much slower, retains data
+without power, "wears out"
+
+Speed & Latency
+< 1 ns registers (SRAM)
+    cache
+~10 ns main memory (DRAM)
+	SSD (flash)
+1 ms HDD (spinning magnetic disk)
+5 ms+ cloud (network)
+
+Cache Memory:
+Locality
+	temporal
+	spatial
+cache - content addressable memory between CPU and main memory
+memory - 1-D array of bytes, where each byte has an address
+block - contiguous group of addresses, where size is always a power of 2
+
+4 Questions that guide cache design:
+	1. Where in the cache can a block of addresses be stored
+		a. anywhere (fully associative)
+		b. one specific place (direct mapped)
+		c. some places (set associative)
+	2. How do you find a block
+	3. What to do on a miss
+		goal: minimize cache misses
+		Approximate teh optimal strategy
+		optimal: replace the block in cache that wont be used for the longest
+		time into the future
+			random - fast, but need random numbers
+			FIFO - simple, fast (shift register)
+			Least Recently Used (LRU) - LRU block gets thrown out, have to keep
+			time stamp + have way to keep oldest time stamp (in hardware)
+	4. How to handle writes
+		Hit:
+			i. change value in cache (write-back), inconsistent values in cache
+			and main memory
+			must write block back to main memory when it is flushed from cache
+			ii. change value in both memory and cache (write-through), no need
+			to write any block back when flushed
+			main memory and cache are consistent
+		Write Miss:
+			i. load block into cache (write allocate)
+			ii. don't load block into cache 
+			
+Example:
+	24 bit address
+	256 byte block
+	32 Kbyte cache size
+	
+256 byte block size => offset = 2**8 
+	32K / 256 = 2**(15 - 8) = 2**7 
+Suppose cache is fully associative => 16 bit tag #
+
+
+Average memory access time eq:
+accessTime = cache_hit_time + miss_rate * miss_penalty
+	miss_penalty = access time for main memory

@@ -1,0 +1,68 @@
+speedup = original_execution_time / new_execution_time, where
+	old_execution_time = execution time without optimizations
+	new_execution_time = execution time with optimizations
+
+Amdahl's Law
+-------------
+speedup  =  1 / ( (fraction_unenhanced) + ((fraction_enhanced) / (speedup_enhanced)) )
+Say optimization applies to fraction enhanced of original execution time.
+executionTime_enhanced = executionTime_original  * (1 - fraction_enhanced) + (executionTime_original * fraction_enhanced / speedup_enhanced)
+speedup = 1 / ( (1-fraction_enhanced) + (fraction_enhanced / speedup_enhanced) )
+
+Example:
+Web Server
+	40% of time computing
+	60% of time writing to disk
+Say you replace CPU with one that is 10x faster. What is overall speedup of the system?
+	speedup_enhanced = 10
+	fraction_enhanced = 0.4
+	^ speedup = 1 / ( (1 - 0.4) + (0.4 / 10) )
+	= 1 / ( 0.6 + 0.04 )
+	= 1 / 0.64
+	= 1.56
+	
+What if CPU were infinitely fast?
+	This will make speedup_enhanced = infinity
+	^ speedup = 1 / ( (1 - 0.4) + (0.4 / infinity) )
+	= 1 / ( (1 - 0.4) + 0 )
+	= 1 / 0.6 = 1.66
+	
+NOTE: Make the common case fast
+
+Example:
+Optimizing just floating point square root a lot vs.
+Optimizing all floating point operations somewhat
+	say FPSQR takes 20% of execution time
+	say FP take 50% of execution time
+	option A: speedup FPSQR by 10x
+	option B: speedup all FP (including FPSQR) by 1.6x
+	Which is better?
+		After the calculations using Amdahl's Law, the speedup is about the same
+		
+NOTE: Shortcomings of Amdahl's Law - you have to know fractional differences
+
+Pocessor Performance Equation
+------------------------------
+executionTime = processor_cycle_time * average_cycles_per_instrcution * dynamic_instruction_count
+	processor_cycle_time = 1 / clock_speed
+	dynamic_instruction_count - number of instructions executed at runtime
+	
+Example:
+FPSQR is 2% of all instructions, and CPI of FPSQR is 20
+all FP instructions are 25% of instruction count, average CPI of FP is 4.0
+average CPI of all other instruction is 1.33
+Alternatives
+	Option A - decrease FPSQR CPI = 2
+	Option B - decrease average CPI of all FP to 2.5
+	
+CPI_original = 4 * 0.25 + 1.33 * (1 - 0.25) = 2
+CPI_FPSQR = 2 - 0.02 * 18 = 1.64
+CPI_FP = (0.75 * 1.33) + (0.25 * 2.5) = 1.625
+speedup = executionTime_original / executionTime_enhanced
+^ speedup_FPSQR = 2 / 1.64 = 1.22
+& speedup_FP = 2 / 1.625 = 1.23
+
+NOTE: Remove single points of failure
+ - Consider power consumption
+ - Best benchmarks are real relevant programs
+ - Peak performance != average performance
