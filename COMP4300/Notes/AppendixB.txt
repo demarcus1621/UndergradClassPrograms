@@ -88,3 +88,72 @@ Suppose cache is fully associative => 16 bit tag #
 Average memory access time eq:
 accessTime = cache_hit_time + miss_rate * miss_penalty
 	miss_penalty = access time for main memory
+	
+Which is better? 32K unified cache or 16K I-cache/16K D-cache
+hit time = 1 cycle 
+miss penalty = 200 cycles(typo in book)
+36% of instructions access data in memory
+misses per 1000 instructions (16K I-cache) - 3.82
+misses per 1000 instructions (16K D-cache) - 40.9
+misses per 1000 instructions (32K unified) - 43.3
+hit time for unified cache takes 1 extra cycle for load/store instruction
+
+first calculate miss rates per data access
+16K I-cache:
+	3.82 / 1000 
+	______________    = 0.004
+		1.00 <- data access / instruction
+		
+16K D-cache
+	40.9 / 1000
+	______________    = 0.114
+		0.36
+
+32K unified
+	43.3 / 1000
+	____________      = 0.318
+		1.36 
+		
+0.36 / (1 + 0.36) = 26% of data access that are load/store
+^ 74% are instruction fetch
+
+split I/D - cache 
+0.74 * (1 + 0.004 * 200) + 0.26 * (1 + 0.114 * 200)
+	= 7.52 cycles
+	
+unified
+0.74 * (1 + 0.318 * 200) + 0.26 *(1 + 1 + 0.318 * 200)
+	= 7.62 cycles
+	
+	
+How much does the cache help?
+200 cycles miss penalty
+1.0 CPI w/o stalls
+1.5 memory references/instruction
+30 misses / 1000 instructions
+
+with cache:
+	execution_time = instruction_count * cycle_time * cycles_per_instruction
+	CPI = 1.0 + (30 / 1000) * 200
+	execution_time = 7.0 * CT * IC
+	
+w/o cache
+	CPI = (1 + 1.5 * 200) = 301
+	execution_time = 301 * IC * CT
+	
+speedup = 301 / 7.0 <= significant speedup
+
+Cache Optimization:
+	reduce hit time
+	reduce miss rate
+		sources of misses
+			first time -> can't fix
+			capacity miss i.e it's full
+				make cache bigger
+			conflict misses
+				increase/decrease associativity
+	reduce miss penalty
+	increase block size
+	virtual memory
+	multi layer cache
+	

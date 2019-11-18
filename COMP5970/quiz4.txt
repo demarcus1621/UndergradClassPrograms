@@ -1,0 +1,33 @@
+Demarcus Campbell
+15NOV2019
+Quiz #4
+
+1. Define each of the firmware extensions provided.
+ - *.img: raw binary disk image
+ - *.trx: uboot Legacy uImage
+ - *.bin: raw binary data
+
+2. What is the difference between firmware extensions?
+*.bin files are raw data while *.trx and *.img are files that contain
+compressed raw binary data.
+
+3. What model number correlates with each file?
+ - dir300-firmware.bin: D-Link Wireless G Router (DIR-300)
+ - AC2100-V1.2.0.42_1.0.1.img: Netgear Nighthawk (AC2100)
+ - RT-AC51U_3.0.0.4_380_8497-g179ec32.trx: ASUS Dual-Band AC750 (RT-AC51U)
+ 
+4. What filesystem is being used by the firmware?
+Each firmware is using the Squash file system.
+
+5. What compression scheme are being used by each firmware?
+ - dir300-firmware.bin: LZMA
+ - AC2100-V1.2.0.42_1.0.1.img: LZMA + zip
+ - RT-AC51U_3.0.0.r_380_8497-g179ec32.trx: LZMA
+
+6. What kind of information contained within the filesystem can be used
+during a penetration test?
+After unsquashing the firmware, one can find private keys, default config
+files, and leftover credentials. Considering that these firmware are for
+consumer level routers, these devices are likely to not be changed/modded
+by much after purchase, meaning that this information is likely to remain
+upon deployment.

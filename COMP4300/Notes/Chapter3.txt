@@ -1,0 +1,70 @@
+ADD R1,R2,R3
+MULT R4,R2,R3
+STO R7,addr
+
+instruction level parallelism - what parts of a "regular" sequential
+assembly language program can be done in parallel
+
+Techniques
+	1. Compiler techniques to expose parallelism
+	2. Better branch prediction to enable instruction level parallelism
+	to be exploited 
+	3. Superscalar - multiple functional units, possibly multiple pipelines
+	instruction issue becomes complicated
+	3. Very Long Instruction Word
+	
+Loop Unrolling:
+for( i = 999; i >= 0; i--)
+	x[i] += 5.0
+
+RISC-V code equivalent
+
+		   V----------- 1 stall
+loop: FLD F0, 0(x1) <--- address of x[999]
+2 stall --V
+	  FDD F4, F4,F0,F2 <--- holds 5.0
+	  FSD F4, 0(x1)
+	  ADDI x1,x1,-8
+	  BNE X1, X2,loop
+			  ^--------- addr of x[0]
+After accounting for stalls, 8 cycles per iteration
+Moving 4th instruction between 2nd and 3rd reduces to 7 cycles per iteration
+(mask latency of one stall cycle between 2nd and 3rd)
+
+
+predicted execution
+						: executing intructions based on branch prediction,
+						must be able to undo if prediction is wrong
+conditional execution
+
+local branch predictions
+-------------------------
+1-bit: predict the branch will go the way it went last time
+2-bit: state machine - don't change prediction until 2 consecutive misses
+
+global branch predictors - base prediction on more than just local history
+	correlating branch predictors - base prediction for this branch on
+	pattern of previous branches
+	tournament predictors - determine best of predictors out of all possible
+	predictors
+
+implementation of correlating branch predictors:
+	store or 1 or 0 for each of last m branches, use that bit_vector to pick
+	from 2**m local predictions
+	
+add r1,r2,r3
+mult r4,r1,r5
+sub r6,r7,r8
+sub r9,r1,r4
+add r10,r6,r9
+add r11,r12,r13
+
+VLIW - compiler finds parallelism, explicitly specifies which intructions
+	can be executed in parallel each group of instructions that can go in
+	prallel is a very long instruction word
+
+superscalar - also has multiple, parallel functional units
+			- runs legacy, sequential code
+			- instruction-issue mechanism
+reservation station - places to "park" an issued instruction until all its
+operands are ready
