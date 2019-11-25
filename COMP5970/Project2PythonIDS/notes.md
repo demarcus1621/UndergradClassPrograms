@@ -17,3 +17,10 @@ IPs on the subnet. Causing traffic to be routed to us, and then we route it
 to its intended destination.
 
 # Nmap Scans
+TBD
+
+# Responder
+TBD
+
+# MS17-010 (CVE 2017-010)
+TBD
