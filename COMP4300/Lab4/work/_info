@@ -1,0 +1,520 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Ealu
+Z0 w1575761043
+Z1 DPx4 work 13 bv_arithmetic 0 22 ;=2SeGQPb=ziI`4efIfkn0
+Z2 DPx4 work 9 dlx_types 0 22 N;][EXI4VdHCK129TNO5`0
+Z3 dC:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/Lab4
+Z4 8C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\datapath_aubie_v1.vhd
+Z5 FC:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\datapath_aubie_v1.vhd
+l0
+L35
+VKlO;j>1]4B=[iXC@5JRTU2
+!s100 ]O>;ZWioe5zPMfU?^cS0@0
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1575761046
+!i10b 1
+Z8 !s108 1575761046.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\datapath_aubie_v1.vhd|
+Z10 !s107 C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\datapath_aubie_v1.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Abehaviour
+R1
+R2
+Z13 DEx4 work 3 alu 0 22 KlO;j>1]4B=[iXC@5JRTU2
+l62
+L61
+VWBb:QW>cF3h@Gl3ZAFUl51
+!s100 MHaSzXC5D?TEM0CMn2?Uz2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eandorswitch
+Z14 w1567531937
+R3
+Z15 8C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/Lab1.vhdl
+Z16 FC:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/Lab1.vhdl
+l0
+L1
+VL]lYjGBa<F?jh5A[7OG8T3
+!s100 2Z:iX?51c4>Xi;_LSd^P=3
+R6
+32
+Z17 !s110 1574795530
+!i10b 1
+Z18 !s108 1574795530.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/Lab1.vhdl|
+Z20 !s107 C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/Lab1.vhdl|
+!i113 1
+R11
+R12
+Abehaviour1
+DEx4 work 11 andorswitch 0 22 L]lYjGBa<F?jh5A[7OG8T3
+l8
+L7
+V48J9?EBg:l?m^N2Nf99?L2
+!s100 I5bfdIiLAPGSJ9:LV=HnZ1
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Eaubie
+Z21 w1575749790
+R2
+R1
+R3
+Z22 8C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\interconnect_aubie.vhd
+Z23 FC:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\interconnect_aubie.vhd
+l0
+L6
+V4ESA;O^c<2dJh_zk:5Nng1
+!s100 ^BkcC0=[[Z=7dOM<k:9AG1
+R6
+32
+Z24 !s110 1575761047
+!i10b 1
+Z25 !s108 1575761047.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\interconnect_aubie.vhd|
+Z27 !s107 C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\interconnect_aubie.vhd|
+!i113 1
+R11
+R12
+Astruct
+Z28 DEx4 work 9 pcplusone 0 22 7aCjK[AeTj=8QKH6[B^741
+Z29 DEx4 work 12 threeway_mux 0 22 P:>j0Q9lW7eO3U6aLbf0<1
+Z30 DEx4 work 3 mux 0 22 _@clMfGLTV1Gj0<gGzR`B1
+R13
+Z31 DEx4 work 8 reg_file 0 22 =FWUAKA9aB=Fmndln>=340
+Z32 DEx4 work 12 dlx_register 0 22 VUm;7VN8NEOD]mJfEfjF51
+Z33 DEx4 work 6 memory 0 22 N=EXW=]lgX7j:c7Rokm:l0
+Z34 DEx4 work 16 aubie_controller 0 22 Rz7LWI=5Jg[OSQHBWC8fe0
+R2
+R1
+Z35 DEx4 work 5 aubie 0 22 4ESA;O^c<2dJh_zk:5Nng1
+l41
+L10
+Z36 VgHl4mG8^Sec^Y_Z^;BCF@1
+Z37 !s100 MZFC7<1A8^U?d]0Zh3C>l3
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R11
+R12
+Eaubie_controller
+Z38 w1575760725
+R2
+R1
+R3
+Z39 8C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\control_aubie_v1.vhd
+Z40 FC:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\control_aubie_v1.vhd
+l0
+L5
+VRz7LWI=5Jg[OSQHBWC8fe0
+!s100 XhSh_1b?LLMLh49dDFN8j3
+R6
+32
+R7
+!i10b 1
+R8
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\control_aubie_v1.vhd|
+Z42 !s107 C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\Lab4\control_aubie_v1.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R1
+R34
+l32
+L31
+VD]A_LO5V=4McZjA9F]e[10
+!s100 =f5GI5c4R02G4TV9VLG^N1
+R6
+32
+R7
+!i10b 1
+R8
+R41
+R42
+!i113 1
+R11
+R12
+Pbv_arithmetic
+w1569904790
+R3
+8C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\bva.vhd
+FC:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\bva.vhd
+l0
+L15
+V;=2SeGQPb=ziI`4efIfkn0
+!s100 DK;Y`J0lJAh`j:XUgQ7B<1
+R6
+32
+b1
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\bva.vhd|
+!s107 C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\bva.vhd|
+!i113 1
+R11
+R12
+Bbody
+R1
+w1569904781
+8C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/bva-b.vhd
+FC:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/bva-b.vhd
+l0
+L1
+VLPF@=`8X>]9I@:nc^2mYE3
+!s100 ;^d^hPQojBY3:39_Lf`ZP1
+R6
+32
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/bva-b.vhd|
+!s107 C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/work/bva-b.vhd|
+!i113 1
+R11
+R12
+nbody
+Edlx_register
+R0
+R2
+R3
+R4
+R5
+l0
+L175
+VVUm;7VN8NEOD]mJfEfjF51
+!s100 ]aPHCclX3Q9cnmGD1;m:^1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R2
+R32
+l181
+L180
+VQ;8@<]P9UA5TKLQ?Q_eDo3
+!s100 e1L9W]4UFfL[8=F5Ni95O0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pdlx_types
+w1569904802
+R3
+8C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\dlx-types.vhd
+FC:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\dlx-types.vhd
+l0
+L2
+VN;][EXI4VdHCK129TNO5`0
+!s100 E2c;:eYf;hh[jFU?F_ci41
+R6
+32
+R7
+!i10b 1
+R8
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\dlx-types.vhd|
+!s107 C:\Users\demar\OneDrive\Desktop\UndergradClassPrograms\COMP4300\work\dlx-types.vhd|
+!i113 1
+R11
+R12
+Ememory
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L262
+VN=EXW=]lgX7j:c7Rokm:l0
+!s100 ZA0bIliQ8IGV5kA;B7e8F3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+R33
+l274
+L272
+V9JVR2?lbbmCWXAzz;a<[J0
+!s100 <JT<FfM^Qz69lXGcW>K9f2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux
+R0
+R2
+R3
+R4
+R5
+l0
+L216
+V_@clMfGLTV1Gj0<gGzR`B1
+!s100 62`lj@RciYc0TLP;YG6R]1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R30
+l222
+L221
+VjhWC]Ci=WaeSWB^>m<aJl3
+!s100 _RIe7]AgW9NZ>K`FP`N@:0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 3 mux 0 22 ?OE3GXGU?ojE_[2kTm6R]2
+l54
+L53
+VZ`d^kRC7AoTFoN?VE`U`d1
+!s100 JJ>K90dRFA@1`j5Z94d8j2
+R6
+32
+Z43 !s110 1575750314
+!i10b 1
+Z44 !s108 1575750314.000000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/Lab3/Lab3.vhdl|
+Z46 !s107 C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/Lab3/Lab3.vhdl|
+!i113 1
+R11
+R12
+Z47 FC:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/Lab3/Lab3.vhdl
+Z48 w1572573142
+Z49 8C:/Users/demar/OneDrive/Desktop/UndergradClassPrograms/COMP4300/Lab3/Lab3.vhdl
+Epcplusone
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L194
+V7aCjK[AeTj=8QKH6[B^741
+!s100 BYR>zGzI7PL?mCH7L>6Hf3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+R28
+l200
+L199
+V;U:bmM?gnPWMQIZ:hN9Kd3
+!s100 >3FSXmlK7hb0bFnzFJNL60
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 9 pcplusone 0 22 bj3GMLP`75<Z_04Tc?YA;3
+l102
+L101
+V^7Z?NgU61_zEMi02]3>5R0
+!s100 X4?bY4PbWY@aY_ZXjUTiB0
+R6
+32
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R11
+R12
+R47
+R48
+R49
+Ereg_file
+R0
+R1
+R2
+R3
+R4
+R5
+l0
+L7
+V=FWUAKA9aB=Fmndln>=340
+!s100 RNozcnfKJnW6mQW1ei>8l0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+R31
+l14
+L13
+VIQzi5]Da0e?97zeHA@NOe1
+!s100 3ZQQA50EKIDKd8J]fM5<K1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ethreeway_mux
+R0
+R2
+R3
+R4
+R5
+l0
+L237
+VP:>j0Q9lW7eO3U6aLbf0<1
+!s100 9f8;AAh9^J;JgO:6>S[?92
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R29
+l243
+L242
+VagLZZ@egFG>TYlEm^e^5E2
+!s100 >cIfW85:`0hkhoMAW5o;H0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehaviour
+R1
+R2
+DEx4 work 12 threeway_mux 0 22 [K:OekGSVVTDod936]:FX3
+l76
+L75
+VjFhV:P8[BhPMdIh@BcgM73
+!s100 =;ejUG7dIhi4Gg^AHHBcW3
+R6
+32
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R11
+R12
+R47
+R48
+R49
