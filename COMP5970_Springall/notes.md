@@ -59,3 +59,9 @@ __Apex Predators (Nation States)__
 
 `Insider Threat` - is a malicious actor that operates with intentional
 privilege that would otherwise be inaccessible
+
+`Social Engineering Attacks` - aim to exploit human(s) in order to gain or
+improve access to the target systems
+
+`Defenses in Depth` - a way to construct security protections in which one
+can fail but others are still operational
