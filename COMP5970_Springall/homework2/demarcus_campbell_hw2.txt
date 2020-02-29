@@ -1,0 +1,181 @@
+# Problem 1
+Date/time:
+GMT Unix Time: Apr 29, 2033 07:23:33 CDT
+
+Client Implementation
+TLSv1.2
+
+Question #1:
+TLSv1.2
+
+Question #2
+Cipher Suites (17 suites)
+    Cipher Suite: Reserved (GREASE) (0x7a7a)
+    Cipher Suite: TLS_AES_128_GCM_SHA256 (0x1301)
+    Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+    Cipher Suite: TLS_CHACHA20_POLY1305_SHA256 (0x1303)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca9)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca8)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+    Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+    Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+    Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+    Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+    Cipher Suite: TLS_RSA_WITH_3DES_EDE_CBC_SHA (0x000a)
+
+Question #3
+AES_256
+
+Question #4
+GCM
+
+Question #5
+Elliptic Curve Diffie-Hellman
+
+Question #6
+SHA-384
+
+Question #7
+CLIENT: 
+server-name
+extended_master_secret
+renegotiation_info
+supported_groups
+ec_point_formats
+session_ticket
+application_layer_protocol_negotiation
+status_request
+signature_algorithms
+signed_certificate_timestamp
+key_share
+psk_key_exchange_modes
+supported_versions
+compress_certificate
+
+SERVER:
+renegotiation_info
+server-name
+ec_point_formats
+application_layer_protocol_negotiation
+extended_master_secret
+
+
+Problem #2
+Question #1
+TLSv1.2
+
+Problem #2
+Cipher Suites (31 suites)
+    Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+    Cipher Suite: TLS_CHACHA20_POLY1305_SHA256 (0x1303)
+    Cipher Suite: TLS_AES_128_GCM_SHA256 (0x1301)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (0x009f)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca9)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca8)
+    Cipher Suite: TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xccaa)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (0x009e)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (0xc024)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (0xc028)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (0x006b)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (0xc023)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (0xc027)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (0x0067)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xc00a)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA (0x0039)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (0xc009)
+    Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+    Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA (0x0033)
+    Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+    Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+    Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA256 (0x003d)
+    Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA256 (0x003c)
+    Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+    Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+    Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+
+Question #3
+AES_256
+
+Question #4
+GCM
+
+Question #5
+Elliptic Curve Diffie-Hellman
+
+Question #6
+SHA-384
+
+Question #7
+CLIENT:
+server_name (len=23)
+ec_point_formats (len=4)
+supported_groups (len=12)
+next_protocol_negotiation (len=0)
+application_layer_protocol_negotiation (len=14)
+encrypt_then_mac (len=0)
+extended_master_secret (len=0)
+signature_algorithms (len=48)
+supported_versions (len=9)
+psk_key_exchange_modes (len=2)
+key_share (len=38)
+padding (len=175)
+
+SERVER:
+renegotiation_info
+server-name
+ec_point_formats
+application_layer_protocol_negotiation
+extended_master_secret
+
+Question #8
+curl -L URL
+
+Question #9
+The only notable differences that I have found, is that curl offers
+more possible cipher suites. This set includes TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+which is essentially the equivalent to no cipher being used for renegotiation.
+It was intended for minimalist clients, but this can be abused by a MITM.
+
+Problem 3:
+Question #1
+Server Certificate
+Server Key
+
+Question #2
+These messages can be sent together, as they are both used to verify the identity of
+the server. If this content is distrusted by the client, the connection can be cut
+short.
+
+Question #3
+"Client hello" must be sent before "server hello" as the server must know the capabilities
+of the client, and can choose which one the connection will use.
+Server Key and Certificate must be sent before the client key. Client must verify that the
+server is who/what it says that it is via the certificate and key.
+Encrypted handshake must be sent before application data. So that the client and server are
+on one accord for the rules that they will follow during the connection.
+
+
+#Problem 4:
+Question #1
+The full connection did not seem to differ once the network allowed it to be established. It
+seemed as if the connection was struggling to establish early in the connection process
+
+Question #2
+I believe it used the session ticket option, as there was no new session ticket passed in
+the connection.
+
+Question #3
+It issues a new session ticket
+
+Question #4
+The server will ignore the request, and continue as if the client was new

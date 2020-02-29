@@ -1,0 +1,101 @@
+DeMarcus Campbell  
+COMP5970-002  
+HW 1
+
+# Problem 1
+As head of the TSA, you set the rules for screening passengers at airport checkouts.
+
+__Assumptions__
+* It is my job to protect the passengers, airlines, and staff of the airport
+* I must be able to screen people without overly invading their privacy
+
+__Assets__
+* The passengers and airport/line staff - people are an asset for TSA
+* The airplanes - the planes are assets of the airports and losing those is a bad look for TSA
+* The resources held by the airport (gasoline, land, etc.) - Those resources are expected to be protected by TSA,
+   as airports rely on TSA and occasionally local police for security
+
+__Threats__
+* Plane hijackers - people who want to steal airplanes for their own purposes (terrorism, joy, monetary)
+* People with vandettas against (other passengers, airlines, etc.) - some people want to get revenge against a person
+   or company so much so that they may want to take drastic measure to enact that revenge
+* People wanting the resources of the airport (gasoline, land, etc.) - in the case that the United States is under attack
+   from another nation, airports and naval ports are going to be assets that the attacking country may want in order to get
+   their soldiers onto American soil
+
+__Countermeasures to Implement__
+* Scanning and screening of employees such that the  employees of TSA are able to handle the importance and stress of the
+   jobs that they are given.
+* Screening of people in the airport for any type of weapons on their person
+* Deeply scanning and checking suspicious bags for any type of possible remote weapons for damaging the planes
+* Screening peoples on person baggage for any types of dangerous items
+* Having air marshalls on flights to protect passengers and pilots while plane is in flight (ideally every flight)
+
+__Countermeasures not to Implement__
+* Psycho(logical) screening every passenger to try and find any possible motives to attack passengers, staff, or airlines
+* Having a National Guard and Air National Guard outpost at airports in order to protect from possible invasions
+* Requiring that passengers not have any form of protection on luggage so that TSA officers can thoroughly parse
+   trough items
+   
+# Problem 2
+Your fraternity, sorority, or student group is electing officers for next year via an online system.
+
+__Assumptions__
+* It is my responsibility to maintain the integrity of the votes
+* I only want active members of my fraternity/sorority to vote
+* The platform that I use to host the election is secure
+* Those that are running for office are not able to vote for themselves
+
+__Assets__
+* The server that is hosting the election site
+* Financial resources of the fraternity/sorority that go into hosting the election site
+* Confidentiality of what each member votes
+
+__Threats__
+* Someone who is running that wants to falsely skew the votes in their favor
+* Non-members of the fraternity/sorority wanting to participate in the vote
+
+__Countermeasures to Implement__
+* Research the platform that you will be using to host the election for any vulns that could lead to modifications
+   of the votes, leaking of vote information, allowing non-members to participate, allowing code execution on the server
+* Implement or use a secondary platform for authentication of members. Allows us to ensure that only members of the fraternity/sorority
+   are able to vote.
+* Also research the authentication platform for vulns
+* Limit what computers will be allowed to access the voting page. This will allow us to monitor the voting physically
+
+__Countermeasures not to Implement__
+* Use physical voting. We already have stated that we want to do electronic voting 
+* Shoulder-surf every voter to ensure that no malicious activity is being done during a vote. Unreasonable
+* Implementing monitoring systems to check for and alert for breaches. This could be too expensive to implement and maintain
+   given the length of the vote.
+   
+# Problem 3
+As a lab admin, I would like to ensure that only students that need access to the lab have access to its resources.
+
+__Assumptions__
+* It is my job to ensure that the property of the lab is not used improperly
+* It is my job to ensure that lab materials are not taken outside of the lab without proper approval
+* It is my job to ensure all that are in the lab and have access to the lab are authenticated
+
+__Assets__
+* Lab materials (computers, tools, etc.)
+* Intellectual Property of the researchers in the lab
+
+__Threats__
+* Careless people
+* People who want to steal the lab materials for profit
+* People who want access to the intellectual property held within the lab without proper authentication
+
+__Countermeasures to Implement__
+* Limit points of entry and exit to the lab
+* On the few entry/exit points, use a(some) form(s) of authentication (magswipe, bio, pin code)
+* ensure authentication is enabled on all possible technology within the lab (domain login for computers, etc)
+* Implement anti-stealing cables for desktop computes
+* Implement secure storage of small items within the lab lockable drawers etc. 
+* Security cameras within the lab to identify potential thieves
+
+__Countermeasures no to Implement__
+* Have armed security present in the labs at all times
+* Perform bag checks on people entering and exiting the lab
+* Have 24/7 monitoring of all security and monitoring systems
+* Completely remove all access to the lab

@@ -1,0 +1,4 @@
+"""
+print("Hashing is not ecryption!" if NAME == "one.py" else "Security through obscurity!")
+from hashlib import sha256
+print sha256(blob).hexdigest()

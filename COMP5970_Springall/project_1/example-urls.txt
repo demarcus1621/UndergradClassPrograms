@@ -1,0 +1,3 @@
+https://aaspring.space/api?token=5bc7cbc10b1871604a31a2de0092bcd1&user=admin&action1=lock-safe&customer1=Alice
+https://aaspring.space/api?token=59fa87daae67d06f12ed7dded0f3abc4&user=admin&action1=no-op&customer=Zelda
+https://aaspring.space/api?token=2db20546e8d567b422c9bb6ce99a889f&user=admin&action1=lock-safe&customer1=Alice&action2=no-op&action3=lock-safe&customer3=Bob
