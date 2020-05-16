@@ -1,0 +1,26 @@
+SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies
+
+This paper is the first attempt at a formal research paper that takes a look
+into the Bitcoin cryptocurrency. The paper attempts to dismantle naive arguments
+about Bitcoin and its stability due to them not having a firm theoretical
+grounding. One such naive approach states that Bitcoin, "works in practice, but
+not in theory." The authors argue that their research aims to prove that research
+is needed in order to back the many claims about Bitcoin, and to determine whether
+or not the claim that Bitcoin will maintain stability based on the practice(s)
+of its users as said practices change. The main contributions that this paper
+states are: this paper being the first systematic approach to the analysis of
+Bitcoin and other cryptocurrencies, provide comparative analysis on different
+parts of the Bitcoin infrastructure, enumerate anonymity issues in the Bitcoin,
+and the authors propose a new protocol, which eliminate the need for trusted
+intermediates based on the use case.
+
+The main strengths of this paper is that it explains some of the possible
+attacks that can be taken against the Bitcoin infrastructure and the in depth
+explanation of how the Bitcoin infrastructure is layed out. The main weakness
+that I found with this paper is how dry it is. The first 1/4 of the paper is
+spent explaining the Bitcoin infrastructure, which I do not feel is integral
+into understanding the topic of Bitcoin during later sections of the paper.
+The in depth explanation of Bitcoin could have been in portions as those
+portions were needed for clarification of the topic at hand. I feel like
+this paper can be expanded upon by performing a deep analysis of the different
+attacks that were discussed in this paper and the feasiblity of the attack.

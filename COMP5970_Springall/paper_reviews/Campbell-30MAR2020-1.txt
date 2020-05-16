@@ -1,0 +1,36 @@
+Understanding the Mirai Botnet
+
+This paper discusses the Mirai Botnet of 2016-2017. The paper covers the origins of the
+botnet, its evolution, and provides a discussion on potential mitigation techniques both
+technical and non-technical. The authors provide measurements of the Mirai botnet and how
+Mirai has helped to shape the security posture of the IoT world. The paper starts by providing
+an analysis of the Mirai botnet itself and explaining how the botnet went about expanding
+and evolving itself. The authors then move into a detailed discussion on how they collected
+their various datasets from which they performed analysis in order to understand the Mirai
+botnet.
+
+I really enjoyed the authors' discussion on their data collection techniques for analysis
+of the Mirai botnet. I thought that it was fairly interesting that the authors had to create
+custom banner scanning regexs because Nmap was not sufficient. I also enjoyed reading the
+subsection that discusses the authors' honeypot, which was used to collect samples of the
+malware that Mirai was using in order to take control of devices and spread itself. I do
+feel like the authors could have done a better job of explaining some sections, as they
+were exceptionally short in comparisons to other subsections, and I do not feel like those
+sections were able to add much value to the discussion at hand. For example, consider section
+4.5 "Device Bandwidth." I do not feel like this section was very productive in contributing
+to the discussion. The section essentially says that the zombie devices have really low resources
+or are located in areas with really low bandwidth. I feel like the authors were trying to
+indirectly conclude that the devices had to be IoT devices even though they previously stated
+that a majority of the devices were located in South America and Southeast Asia. If the 
+authors were "gamers" they would know that bandwidth in South American countries is not the
+best. This so much the case that some video game companies had to create servers within
+South America to reduce complaints from their American clientelle about laggy players from
+South America. The authors do redeem themselves in a following section with an analysis of the
+credentials that the botnet used to brute force login to vulnerable devices. This is something
+that I feel like could be used to correlate these devices as IoT. 
+
+I do think this paper can be expanded by implementing some of the authors' reccomendations of
+mitigation techniques and then attempting to run some of the Mirai malware samples on the
+IoT infrastructure that was created. This would allow the authors to understand the difficulty/
+simplicity of implementing such mitigation techniques and also whether or not those techniques
+are effective at stopping Mirai.

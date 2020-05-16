@@ -1,0 +1,25 @@
+Alice in Warningland
+This paper discusses statistics that were collected from Google Chrome and Mozilla Firefox
+browsers about warnings and how users approach these warnings. This paper provides analysis
+of said statistics that allows for an understanding and comparison of how different browsers
+approach these warnings, and how demographics collected by these browsers play a role into
+a user's decision making process. The major contributions that this paper claims to make are
+that they are presenting the first "in-depth" field study of security warnings. The authors
+refer to two previous lab studies on browser warnings and how the second lab study claims
+that both itself and the previous study are invalid due to potential biases within the
+study. If we consider that claim to be true, then this is the first seemingly valid lab study
+of browser warnings. The authors also use browser telemetry metrics to aid in their studies.
+The authors use this data to understand what types of sites where warnings are not heeded
+by users, and the types of users that are more/less likely to acknowledge the warning from
+the browser. Finally, the authors make some suggestions to UI/UX designers to help decrease
+the "click-through"  rates, where "click-through" is the act of ignoring a warning and
+continuing to the site that yielded the warning.
+
+This paper does a really good job of understanding and comparing their research to previous
+studies. For example the authors mention the Sotirakopoulos et al paper that concludes that
+prior lab studies had biases which "inflated" click-through rates. The authors also provide
+a section later on in the paper that discusses the differences between their research and
+the papers prior. If I was writing this paper, I would attempt to extend this research by
+including more browsers than these authors like Oracle, Edge, Safari, Brave, etc. I would
+also try to not be as repetitive as these authors. In my opinion, this paper is very repetitive
+on some of its points thus making this paper longer than I feel is necessary.

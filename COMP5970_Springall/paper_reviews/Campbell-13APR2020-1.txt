@@ -1,0 +1,35 @@
+FBS-Radar: Uncovering Fake Base Stations at Scale in the Wild
+
+This paper is about a novel approach to the detection and mitigation of the 
+use of fake GSM base stations used by criminals in order to scam and conduct
+fraud. The main contributions of this paper are: usage of crowdsourced data
+for effective identification of FBSs, novel approach to geolocation of FBSs
+using WiFi access points of devices, statistics showing how this system has
+been effective at detecting FBSs and assisting with the takedown of these
+stations. The thing to note about the crowdsourcing of data to detect FBSs
+is that the program was an opt-in service, and even after the end-users opted-
+in, the researchers/developers ensured that minimal data about the end-users
+was collected. The researchers/developers were able to determine that only
+the metadata from messages and some message content was needed in order to
+detect fradulent SMS messages sent by a FBS. This approach doesn't even need 
+to collect the end-user's cellphone number of their GPS location, which helps
+ensure privacy whilst accomplishing the goal of detecting and mitigating the
+use of FBSs. Since the researchers are not collecting GPS data, it makes it
+harder to geolocate the FBSs, but by collecting WiFi access point information
+from the area of affected devices, one can get a potential radius of affect
+for the FBS.
+
+One of this paper's main strengths is how easy it is to follow. The authors
+do an exceptional job of explaining complex ideas all while keeping the
+technicality of the paper high. The authors also do a good job of discussing
+related works and how their approach is different from those before it. The
+authors show how the approach may be similar in concept, but the approach to
+implementation that our authors use makes the practicality of their approach
+so much higher. If I was writing the paper, I would have taken the limitations
+section from the begininng of the paper and added it to the ending limitations
+section of the end of the paper. I feel like this section could have been
+expanded upon a bit more and was particularly lacking in content. This researchers
+can be expanded in a few ways, some of which were mentioned by the authors. One
+such way is the detection of passive FBSs. This would be an interesting topic to
+explore as FBSs only send connection packets to devices if they are not being used
+in an active manner, and only sniff traffic like a MiTM. 

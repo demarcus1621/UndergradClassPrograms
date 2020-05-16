@@ -1,0 +1,35 @@
+Lawful Device Access without Mass Surveillance Risk: A Technical Design Discussion
+
+This paper is the proposal and description for a device that attempts to
+merge one of the gaps between the security community and government, when
+it comes to lawful search and seizure of devices. As it stands, when the
+government wants to gain lawful access to the contents of a device via
+subpoena, they are met with opposition from manufacturers for various
+reasons. This opposition has lead the government to seek other means of
+gaining access to the devices in question on a "case-by-case" basis from
+third-parties that discover vulnerabilities in these devices and provide
+services to investigators at a premium rate. One major concern of the
+security community and manufacturers when discourse on this topic first
+emerged in the 90's, is that potential accesses granted to government
+could be used for mass surveillance or discovered by others and potentially
+exploited for malicious purposes. The authors a proposing a device that
+will allow government to have the ability to retrieve protected information
+on a device under investigation after providing proper proof to the manufacturer,
+but also provides a sense of comfort for security and privacy minded individuals.
+
+This paper does an exceptional job of explaining the background context that
+lead up to the proposal of the idea that this paper discusses. This is because
+without proper understanding of the history and the discourse that has happened
+in the past, it would be hard for one to understand why this proposal is even
+needed. One thing that I feel that the paper does poorly is that it freely uses
+terminology that is not contextually elaborated upon until later in the paper.
+This leaves a bit of a knowledge gap in with the reader if they are not already
+familiar with the used terminology. An example of this, is the word "escrow,"
+which is used heavily throughout the paper, but is not contextually explained
+until the sixth page. Outside of my one criticism of the paper, I do feel that
+it was effectively written and was digestible. I do feel like this is a great
+example of a paper that isn't overly mathematical or theoretical. Like the authors
+mention at the beginning of the paper, the research for finding a medium where
+law enforcement is able to conduct investigations without violating the privacy
+and security of the general public is practically non-existent. This field could
+and should be expanded upon in order to discover if a happy-medium is even possible.

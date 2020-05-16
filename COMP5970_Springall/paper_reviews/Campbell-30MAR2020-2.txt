@@ -1,0 +1,30 @@
+The Crossfire Attack
+
+This paper discusses a novel DDoS attack technique where the intended victims
+of the attack are not directly targeted, but are still effected by the attack.
+The Crossfire Attack works by determining the main link routers that a target
+geolocation is routed through on the internet backbone. Once those routers are
+found, the attacker botnet is able to flood the data path of the router such
+that it is undetectable that the attack is happening in the targeted geolocation.
+The potential size of the victim geolocation the authors claim can span countries.
+This is plausible due to the fact that the authors are proposing an attack that
+would carefully select link routers on the internet backbone that all ISPs in that
+country use to connect to the internet. Another particularly fascinating thing
+about the Crossfire attack is that it is easily adaptable such that the attacker
+can change the link routers that are being attacked to keep the DDoS effect even
+after BGP or OCSP reroute the nodes.
+
+This paper does a really good job of explaining the feasibility of their attack
+and provide supporting statistics for algorithm compute times and ensuring that
+early congestion does not happen to zombies that are in the same geolocation. The
+could improve on the diagrams provided. I found some of them particularly hard to
+read and therefore understand even with the description text.
+
+Had I been author of this paper, I would have liked to potentially use Carnegie
+Mellon's resources to actually perform a PoC of the Crossfire attack. My current
+understanding of the paper is that the authors did not actually perform the attack
+even virtually, but they only calculated the feasibility of the attack. To expand
+upon this work, I think it would be interesting to figure out how targeted an attack
+using Crossfire could get. This paper discusses the potential for very large geolocation
+targets and only get as small as a univeristy. I would like to know if this could be
+applied to target even more specific targets using the "transient" links. 

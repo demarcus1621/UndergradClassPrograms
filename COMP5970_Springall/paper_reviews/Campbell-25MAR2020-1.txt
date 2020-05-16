@@ -1,0 +1,40 @@
+The science of guessing: analyzing an anonymyzed corpus of 70 million passwords
+
+The authors of this paper discuss the "formalization" of a metric by which
+passwords are classified as "secure" by introducing a variable that can be
+set to model different types of "practical attack." This is important because
+in this paper the authors discuss how the previous works on password security
+metrics are flawed fundamentally. One such reason that is mentioned is that
+wordlists were not picked with the _specific_ target set of hashes in mind.
+The second main contribution of this paper was the process in which the 
+researchers went about the collection of passwords for analysis. The researchers
+were legally granted the ability to place a proxy server that would collect passwords
+from Yahoo login pages. This password information was then hashed, with random salt,
+where the salt is then wiped from the server before the researchers ever did
+any analysis of the data set. This is unique, as most password sets that are currently
+found "in the wild" in password dumps that were gained during data breaches.
+The research team worked with Yahoo to retrieve legitimately used passwords without
+comprimising the privacy and passwords of the users whose passwords were collected.
+The other important contribution of this paper was that the authors took techniques
+used by computational linguists to approximate existing metrics with data subsets.
+
+One thing that I feel like the authors of this paper did exceptionally well doing
+is explaining how former metric techniques did not realistically model how an
+attacker would approach attempting to crack passwords, but I do not think that it
+is necessarily fair to compare the "effectiveness" of these different techniques
+given the time difference in which the metrics and techniques were created in
+regards to the technology used. One must consider that the technology and resources
+available to us in recent times is a lot more than what was available when the
+techniques were originally created. The paper mentions that the John the Ripper did
+not get released until AFTER the metrics were originally created. The authors do
+mention that things like mangling to create 1337 speak did not exist or was not
+taken into consideration when the original studies were done.
+
+Had I been the author of the paper, I would have attempted to not make the paper so
+dry. Reading through this paper as it currently stands is pretty rough to read as
+the sentences run long, and there exists little explanation of the mathematical
+concepts that are being used for those who do not have a background in statistics.
+This paper could "possibly" extended by reconducting the studies that produced the
+original metrics that the authors compare against towards the beginning of the paper
+with modern technologies and resources and determine if the limitations of computational
+power and resources had a major effect on the calculations of these metrics.
